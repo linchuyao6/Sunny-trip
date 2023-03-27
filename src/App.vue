@@ -1,12 +1,10 @@
 <template>
   <div class="app">
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" v-if="$route.meta.keepAlive" />
+    <router-view v-slot="props">
+      <keep-alive include="home">
+        <component :is="props.Component" />
       </keep-alive>
     </router-view>
-    <router-view v-if="!$route.meta.keepAlive"></router-view>
-
     <!-- 这里用来控制是否显示tabbar -->
     <tabbar v-if="!route.meta.hideTabBar" />
     <loading v-show="mainStore.isLoading" />

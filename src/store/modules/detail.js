@@ -7,11 +7,13 @@ const useDetail = defineStore('detail', {
   }),
   actions: {
     async fetchDetail(houseId) {
+      this.Detail = {}
+      this.mainPart = {}
       const { data } = await getDetail(houseId)
       this.Detail = data.data
-      // this.mainPart = this.Detail.mainPart\
-      this.mainPart = data.data.mainPart
-      console.log(this.mainPart)
+      if (this.Detail) {
+        this.mainPart = this.Detail.mainPart
+      }
     },
   },
 })

@@ -31,7 +31,6 @@ const getIndex = (item) => {
   const data = valueArray.findIndex((data) => data === item) + 1
   return data
 }
-console.log(swiperGroup)
 </script>
 
 <template>

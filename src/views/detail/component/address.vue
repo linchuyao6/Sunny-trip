@@ -8,7 +8,7 @@ const props = defineProps({
     default: () => ({}),
   },
 })
-console.log(props.position)
+
 const mapRef = ref()
 onMounted(() => {
   var map = new BMapGL.Map(mapRef.value) // 创建Map实例
