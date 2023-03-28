@@ -52,7 +52,13 @@ const onConfirm = (values) => {
   mainStore.nextDate = end
   totalDay.value = getDiffDays(start, end)
 }
-console.log(hotSuggestion.value)
+
+// 转到search页面
+const gotoSearch = () => {
+  router.push({
+    path: '/search',
+  })
+}
 </script>
 
 <template>
@@ -107,7 +113,7 @@ console.log(hotSuggestion.value)
     </div>
     <!-- 搜索按钮 -->
     <div class="search_btn">
-      <button>开始搜索</button>
+      <button @click="gotoSearch">开始搜索</button>
     </div>
   </div>
 </template>

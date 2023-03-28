@@ -10,9 +10,6 @@ const router = createRouter({
     {
       path: '/home',
       component: () => import('@/views/home/home.vue'),
-      meta: {
-        keepAlive: true,
-      },
     },
     {
       path: '/favor',
@@ -36,6 +33,10 @@ const router = createRouter({
     {
       path: '/datail/:id',
       component: () => import('@/views/detail/detail.vue'),
+    },
+    {
+      path: '/search',
+      component: () => import('@/views/search/search.vue'),
     },
   ],
 })

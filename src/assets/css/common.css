@@ -1,15 +1,19 @@
-:root{
-  --primary-color:#ff9854;
-  --linear-gradient:(90deg, #fa8c1d, #fcaf3f);
-  --van-primary-color:var(--primary-color)
+:root {
+  --primary-color: #ff9854;
+  --linear-gradient: (90deg, #fa8c1d, #fcaf3f);
+  --van-primary-color: var(--primary-color);
+  --0ff99981-props_height: 35px;
+  --0ff99981-props_keyWordFontSize: 12px;
 }
 
+html {
+  line-height: normal;
+}
 body {
-
   font-size: 14px;
 }
 
-.top-page{
+.top-page {
   position: relative;
   z-index: 9;
   height: 100vh;
@@ -22,4 +26,12 @@ body {
   width: 12px;
   height: 12px;
   background: url(../img/detail/icon_check.png) 0 0 / 100% 100%;
+}
+
+.ellipsis-text-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
