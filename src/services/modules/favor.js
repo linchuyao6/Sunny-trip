@@ -4,10 +4,10 @@ const fetchFavorList = () => {
     url: '/favor/list',
   })
 }
-// const fetchSearchResaul = () => {
-//   return myRequest.get({
-//     url: '/search/result',
-//   })
-// }
+const fetchHistory = () => {
+  return myRequest.get({
+    url: '/favor/history',
+  })
+}
 
-export { fetchFavorList }
+export { fetchFavorList, fetchHistory }

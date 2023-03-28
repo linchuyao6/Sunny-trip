@@ -10,7 +10,7 @@ defineProps({
 <template>
   <div id="house_favor">
     <div class="pic">
-      <img :src="item.pictureList[1]" alt="" />
+      <img :src="item.pictureList[0]" alt="" />
       <!-- 分页器 -->
       <div class="score">
         <div class="left">{{ item.commentBriefForCD.overall }}分</div>
@@ -38,7 +38,7 @@ defineProps({
     </div>
     <div class="content">
       <div class="tags">
-        <div class="address">{{ item.address }}</div>
+        <div class="address ellipsis-text-1">{{ item.address }}</div>
         <div class="houseType">
           {{ item.unitSummeries[0].text }}·{{ item.unitSummeries[1].text }}
         </div>
@@ -166,6 +166,7 @@ defineProps({
         font-size: 12px;
         line-height: 16px;
         border-radius: 2px;
+        padding: 0 4px;
       }
       .houseType {
         position: relative;
