@@ -25,7 +25,6 @@ const useHomeStore = defineStore('home', {
       const { data } = await getHouseList(this.currentPage)
       this.houseList.push(...data.data)
       this.currentPage++
-      console.log(this.houseList)
     },
   },
 })

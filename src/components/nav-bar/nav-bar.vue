@@ -7,9 +7,7 @@
       </slot>
     </template>
     <template #title>
-      <slot name="title">
-        {{ title }}
-      </slot>
+      <slot name="title"> </slot>
     </template>
     <template #right>
       <slot name="right">
@@ -22,10 +20,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
 defineProps({
-  title: {
-    type: String,
-    default: '标题',
-  },
   leftText: {
     type: String,
     default: '',
@@ -63,5 +57,10 @@ const handleLeftClick = () => {
   height: 15px;
   background-image: url(../../assets/img/home/icon-right-menu.png);
   background-size: 20px 15px;
+}
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--primary-color);
 }
 </style>
